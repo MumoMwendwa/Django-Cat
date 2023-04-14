@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hr information</title>
+    <style>
+         form{
+            width: 40%;
+            margin: auto;
+            background-color: palevioletred;
+        }
+        form p{
+            display: flex;
+            flex-direction: column;
+            background-color: paleturquoise;
+        }
+        form p label{
+            color: black;
+            margin-bottom: 5px;
+            font-size: 20px;
+        }
+        form p input{
+            height: 40px;
+            border: unset;
+            color: rgba(5, 4, 9, 0.86);
+            background-color: rgba(200, 234, 233, 0.94);
+
+        }
+        form input {
+            width: 60%;
+            height: 40px;
+            Django default
+            border: unset;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: crimson;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Employee information</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" name="btn-reg" value="Register">
+    </form>
+    {{ name }}
+    {{ email }}
+    {{ password }}
+    {{ gender }}
+    {{ age }}
+<a href={% url "site-home" %}><button>home</button></a>
+</body>
+</html>
